@@ -47,12 +47,12 @@
 			<!-- End Logo Header -->
 
 			<!-- Navbar Header -->
-			@include('partial.nav')
+			@include('layout.nav')
 			<!-- End Navbar -->
 		</div>
 
 		<!-- Sidebar -->
-		@include('partial.sidebar')
+		@include('layout.sidebar')
 		<!-- End Sidebar -->
 
 		<div class="main-panel">
@@ -81,7 +81,7 @@
 			</div>
 
 			<!-- Footer -->
-			@include('partial.footer')
+			@include('layout.footer')
 			<!-- End Footer -->
 		</div>
 		
