@@ -19,4 +19,8 @@ Route::get('/journal', function () {
     return view('frontend.journal');
 });
 
+Route::get('/detail', function () {
+    return view('frontend.detail');
+});
+
 

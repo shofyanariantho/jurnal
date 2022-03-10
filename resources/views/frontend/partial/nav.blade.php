@@ -9,7 +9,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Revo</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"
+        <a class="navbar-brand logo-image" href="/"
           ><img src="{{asset('landing/images/logo.svg')}}" alt="journal" />
           <p class="navbar-brand logo-text">Journal Edu</p></a
         >
