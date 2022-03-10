@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
+
+<<<<<<< HEAD
+Route::get('/master', function () {
+    return view('layout.admin');
+});
+
+=======
 Route::get('/journal', function () {
     return view('frontend.journal');
 });
@@ -24,3 +31,4 @@ Route::get('/detail', function () {
 });
 
 
+>>>>>>> be34f834e63f6929882426a3d4ad6cf974597db4
