@@ -15,7 +15,7 @@
                   
                 <div class="col-lg-6 col-xl-7 ">
                 <div class="image-container">
-                    <img class="img-fluid" src="{{asset('landing/images/details-1.jpg')}}" alt="alternative" />
+                    <img class="img-fluid" src="{{asset('landing/images/landing-img.svg')}}" alt="alternative" />
                 </div>
                 <!-- end of image-container -->
                 </div>
@@ -38,7 +38,7 @@
           <p class="p-heading p-large">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit voluptate distinctio accusantium aperiam minima aliquam deserunt itaque, quae tempore in, omnis maxime! Fugit ullam inventore cupiditate ipsam voluptatibus cum commodi.
           </p>
-          <a class="btn-solid-lg" href="details.html">Show More Journal</a> 
+          <a class="btn-solid-lg" href="/journal">Show More Journal</a> 
         </div>
         <!-- end of col -->
       </div>

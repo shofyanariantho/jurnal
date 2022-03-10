@@ -30,7 +30,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
               </p>
-              <a class="btn-solid-dtl" href="#your-link">Detail Journal</a>
+              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
             </div>
             <!-- end of text-container -->
           </div>
@@ -42,7 +42,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
               </p>
-              <a class="btn-solid-dtl" href="#your-link">Detail Journal</a>
+              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
             </div>
             <!-- end of text-container -->
           </div>
@@ -58,7 +58,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
               </p>
-              <a class="btn-solid-dtl" href="#your-link">Detail Journal</a>
+              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
             </div>
             <!-- end of text-container -->
           </div>
@@ -70,7 +70,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
               </p>
-              <a class="btn-solid-dtl" href="#your-link">Detail Journal</a>
+              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
             </div>
             <!-- end of text-container -->
           </div>

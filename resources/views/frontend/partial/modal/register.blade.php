@@ -5,7 +5,7 @@
           <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
           <div class="col-lg-8">
             <div class="image-container">
-              <img class="img-fluid" src="{{asset('landing/images/details-lightbox.jpg')}}" alt="alternative" />
+              <img class="img-fluid" src="{{asset('landing/images/loreg.svg')}}" alt="alternative" />
             </div>
             <!-- end of image-container -->
           </div>
