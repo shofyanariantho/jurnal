@@ -4,15 +4,15 @@
             <ul class="nav">
                 <li class="nav-item">
                     <p> E-Journal 1.0 - 
-                        <a href="https://almatuq.com">
-                            Pesantren Al-Ma'tuq Sukabumi
+                        <a href="#">
+                            Kelompok 17 PKS Digital School
                         </a>
                     </p>
                 </li>
             </ul>
         </nav>
         <div class="copyright ml-auto">
-            Â© 2022. All rights reserved.</a>
+            © 2022. All rights reserved.</a>
         </div>				
     </div>
 </footer>
