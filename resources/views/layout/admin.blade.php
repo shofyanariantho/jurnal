@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>E-Journal Pesantren Al-Ma'tuq</title>
+	<title>E-Journal Edu</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="{{asset('admin/assets/img/icon.ico')}}" type="image/x-icon"/>
 
@@ -24,7 +24,7 @@
 	@stack('style')
 
 </head>
-<body>
+<body data-background-color="dark">
 	<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
