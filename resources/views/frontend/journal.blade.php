@@ -7,6 +7,7 @@
           <div class="row">
             <div class="col-xl-10 offset-xl-1">
               <h1>Daftar Journal</h1>
+              <a class="btn-solid-dtl" href="#">Tambah Journal</a>
             </div>
             <!-- end of col -->
           </div>
@@ -25,7 +26,8 @@
           <div class="resource-container">
             <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
             <div class="text-container">
-              <h4>Judul Journal</h4>
+              <h4 >Judul Journal</h4>
+              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
@@ -38,6 +40,7 @@
             <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
             <div class="text-container">
               <h4>Judul Journal</h4>
+              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
@@ -54,6 +57,7 @@
             <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
             <div class="text-container">
               <h4>Judul Journal</h4>
+              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
@@ -66,6 +70,7 @@
             <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
             <div class="text-container">
               <h4>Judul Journal</h4>
+              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.

@@ -49,4 +49,32 @@
     </div>
     <!-- end of container -->
   </div>
+  {{-- Komentar --}}
+  <div class=" bg-dark-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <textarea class="form-control" placeholder="write a comment..." rows="3" style="margin-bottom: 1rem"></textarea>
+        <button type="button" class="btn-solid-lg">Post</button>
+        <div class="clearfix"></div>
+        <hr />
+      </div>
+      <div class="col-lg-5" style="margin-left: 4rem">
+            <li class="media">
+              <a href="#" class="pull-left">
+                <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="rounded-circle" style="margin-right: 1rem" />
+              </a>
+              <div class="media-body">
+                <strong class="text-success">Username</strong>
+                <p>Lorem ipsum dolor <a href="#">#sitamet</a> sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </li>
+      </div>
+    </div>
+  </div>
+  </div>
+  {{-- End Komentar --}}
 @endsection
+
+
+    
