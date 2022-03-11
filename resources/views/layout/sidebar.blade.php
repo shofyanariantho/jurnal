@@ -3,7 +3,7 @@
         <div class="sidebar-content">
             <ul class="nav nav-primary">
                 <li class="nav-item @yield('sb-dashboard')">
-                    <a href="/" aria-expanded="false">
+                    <a href="/dashboard" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
