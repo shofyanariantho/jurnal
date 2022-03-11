@@ -25,17 +25,17 @@
                     <div class="collapse @yield('sb-jurnal')" id="base">
                         <ul class="nav nav-collapse">
                             <li class=@yield('sb-jurnal-list')>
-                                <a href="/list-jurnal">
+                                <a href="/admin/jurnal">
                                     <span class="sub-item">List Jurnal</span>
                                 </a>
                             </li>
                             <li  class=@yield('sb-jurnal-add')>
-                                <a href="/add-jurnal">
+                                <a href="/admin/jurnal-add">
                                     <span class="sub-item">Tambah Jurnal</span>
                                 </a>
                             </li>
                             <li class= @yield('sb-jurnal-kategori')>
-                                <a href="/kategori-jurnal">
+                                <a href="/admin/jurnal-kategori">
                                     <span class="sub-item">Kategori</span>
                                 </a>
                             </li>
