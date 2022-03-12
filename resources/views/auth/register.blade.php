@@ -6,17 +6,15 @@
     </div>
     <hr class="mb-4"/>
     <div class="container">
+        <form action="{{ route('register') }}" method="POST">
+            @csrf
         <div class="row">
-            <div class="col-6">
-                <form method="POST" action="{{ route('register') }}">
-                    @csrf
+            <div class="col-md-6">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control-input form-control-select" placeholder="Masukan Nama" required >
                         @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" class="form-control-input form-control-select" placeholder="Email" required>
@@ -62,7 +60,7 @@
                     </div>
                 </div>
                 {{-- ROW 2 --}}
-                <div class="col-6">
+                <div class="col">
                         <div class="form-group">
                             <input type="text" name="gelar_belakang" class="form-control-input form-control-select" placeholder="Gelar Belakang" required >
                             @error('gelar_belakang')
@@ -79,8 +77,16 @@
                                 </span>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            <input type="number" name="jenis_kelamin" class="form-control-input form-control-select" placeholder="Jenis Kelamin" required>
+                            @error('jenis_kelamin')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                         
-                        <div class="form-group ">
+                        {{-- <div class="form-group ">
                             <select name="jenis_kelamin" class="form-control-select form-control-input" required >
                                 <option value="" disabled selected >Jenis Kelamin</option>
                                 <option value="laki-laki">Laki-Laki</option>
@@ -91,7 +97,7 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <input type="text" name="tempat_lahir" class="form-control-input form-control-select" placeholder="Tempat Lahir" required>
                             @error('tempat_lahir')
@@ -112,9 +118,9 @@
                         <button type="submit" class="btn btn-solid-reg" style="float: right">
                             {{ __('REGISTER') }}
                         </button>
-                    </div>
-            
+                    </div>    
         </div>
+        </form>
     </div>
     
 </div>

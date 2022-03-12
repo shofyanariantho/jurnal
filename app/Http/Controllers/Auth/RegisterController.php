@@ -61,7 +61,10 @@ class RegisterController extends Controller
             'jenis_kelamin' => ['required'],
             'tempat_lahir' => ['required'],
             'tanggal_lahir' => ['required'],
-        ]);
+        ],
+    [
+        'name.required' => 'Mohon Isi Name',
+    ]);
     }
 
     /**
@@ -72,22 +75,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        dd : $request(all());
+        // $user = User::create([
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'password' => Hash::make($data['password']),
+        // ]);
 
-        Profile::create([
-            'lembaga' => $data['lembaga'],
-            'gelar_depan' => $data['gelar_depan'],
-            'gelar_belakang' => $data['gelar_belakang'],
-            'pendidikan' => $data['pendidikan'],
-            'jenis_kelamin' => $data['jenis_kelamin'],
-            'tempat_lahir' => $data['tempat_lahir'],
-            'tanggal_lahir' => $data['tanggal_lahir'],
-            'user_id' => $user->id,
-        ]);
-        return $user;
+        // $profile = Profile::create([
+        //     'lembaga' => $data['lembaga'],
+        //     'gelar_depan' => $data['gelar_depan'],
+        //     'gelar_belakang' => $data['gelar_belakang'],
+        //     'pendidikan' => $data['pendidikan'],
+        //     'jenis_kelamin' => $data['jenis_kelamin'],
+        //     'tempat_lahir' => $data['tempat_lahir'],
+        //     'tanggal_lahir' => $data['tanggal_lahir'],
+        //     'user_id' => $user->id,
+        // ]);
+        // return $user;
     }
 }

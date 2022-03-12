@@ -44,8 +44,6 @@
    {{-- End Header --}}
     
    {{-- Modal Register --}}
-   
-
  
    {{-- End Modal Register --}}
 
