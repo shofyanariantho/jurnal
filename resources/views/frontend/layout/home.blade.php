@@ -44,7 +44,9 @@
    {{-- End Header --}}
     
    {{-- Modal Register --}}
-   @include('frontend.partial.modal.register')
+   
+
+ 
    {{-- End Modal Register --}}
 
    {{-- Modal Login --}}

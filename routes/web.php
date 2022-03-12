@@ -11,17 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', 'IndexController@index');
 
 Route::get('/master', function () {
     return view('layout.admin');
 });
 
-Route::get('/journal', function () {
-    return view('frontend.journal');
-});
+Route::get('/journal', 'IndexController@ViewJournal');
 
 Route::get('/detail', function () {
     return view('frontend.detail');
@@ -38,3 +34,6 @@ Route::get('/admin/jurnal-add', function() {
 Route::get('admin/jurnal-kategori', function() {
     return view('admin.jurnal.kategori');
 });
+
+Auth::routes();
+

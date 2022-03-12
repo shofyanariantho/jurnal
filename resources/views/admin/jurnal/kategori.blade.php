@@ -13,6 +13,7 @@
 @section('sb-jurnal-button', 'active')
 @section('sb-jurnal-kategori', 'active')
 
+
 <!-- Style -->
 @push('style')
 <link rel="stylesheet" href="{{asset('admin/assets/css/fonts.css')}}">
