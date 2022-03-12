@@ -21,10 +21,11 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('admin/assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('admin/assets/css/atlantis.min.css')}}">
-	@stack('style')
+	<link rel="stylesheet" href="{{asset('admin/assets/css/fonts.css')}}">
+	<link rel="stylesheet" href="{{asset('admin/assets/css/fonts.min.css')}}">
 
 </head>
-<body data-background-color="dark">
+<body>
 	<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
@@ -55,37 +56,18 @@
 		<!-- Sidebar -->
 		@include('layout.sidebar')
 		<!-- End Sidebar -->
-
-		<div class="main-panel">
+	
+	<!-- Content -->
+	<div class="main-panel">
 			<div class="content">
-				<div class="page-inner">
-					<div class="page-header">
-						<h4 class="page-title">@yield('br-menu')</h4>
-						<ul class="breadcrumbs">
-							<li class="nav-home">
-								<a href="#">
-									<i class="flaticon-home"></i>
-								</a>
-							</li>
-							<li class="separator">
-								<i class="flaticon-right-arrow"></i>
-							</li>
-							<li class="nav-item">
-								<a href="#">@yield('br-title')</a>
-							</li>
-						</ul>
-					</div>
-					<div class="page-category">
-						@yield('content')	
-					</div>
-				</div>
+				@yield('content')
 			</div>
+			<!-- End Content -->
 
 			<!-- Footer -->
 			@include('layout.footer')
 			<!-- End Footer -->
 		</div>
-		
 	</div>
 	<!--   Core JS Files   -->
 	<script src="{{asset('admin/assets/js/core/jquery.3.2.1.min.js')}}"></script>

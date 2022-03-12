@@ -3,7 +3,7 @@
         <div class="sidebar-content">
             <ul class="nav nav-primary">
                 <li class="nav-item @yield('sb-dashboard')">
-                    <a href="/" aria-expanded="false">
+                    <a href="/dashboard" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
@@ -35,14 +35,23 @@
                                 </a>
                             </li>
                             <li class= @yield('sb-jurnal-kategori')>
-                                <a href="/admin/jurnal-kategori">
+                                <a href="/admin/jurnal/kategori">
                                     <span class="sub-item">Kategori</span>
                                 </a>
                             </li>
                         </ul>
+                        <li class="nav-item">
+                            <a href="/profile" class="nav-link">
+                                <i class="nav-icon fa fa-camera-retro"></i>
+                        <p>Profile
+                            <span class="right badge badge-danger"></span>
+                                    </p>
+                                </a>
+                           </li>
                     </div>
                 </li>
             </ul>           
         </div>
     </div>
 </div>
+
