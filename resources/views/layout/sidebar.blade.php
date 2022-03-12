@@ -30,7 +30,7 @@
                                 </a>
                             </li>
                             <li  class=@yield('sb-jurnal-add')>
-                                <a href="/admin/jurnal-add">
+                                <a href="/jurnal/create">
                                     <span class="sub-item">Tambah Jurnal</span>
                                 </a>
                             </li>

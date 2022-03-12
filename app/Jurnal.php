@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jurnal extends Model
 {
-    protected $table = 'kategori_jurnal';
-    protected $fillable = ['penulis', 'judul', 'abstrak', 'tahun', 'cover', 'file', 'user_id', 'kategori_jurnal_id'];
+    protected $table = 'jurnal';
+    protected $fillable = ['penulis', 'judul', 'abstrak', 'tahun', 'cover', 'file', 'kategori_jurnal_id'];
+
+    public function kategori()
+    {
+        return $this->belongsTo('App\Kategori');
+    }
 }

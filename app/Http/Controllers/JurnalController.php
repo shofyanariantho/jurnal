@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Jurnal;
+use File;
 
 class JurnalController extends Controller
 {
@@ -37,19 +38,30 @@ class JurnalController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required',
+        $request->validate([
+            'penulis' => 'required',
+            'judul' => 'required',
+            'abstrak' => 'required',
+            'tahun' => 'required',
+            'cover'	=> 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'file' => 'required|mimes:pdf|max:10000',
+            'kategori_jurnal_id' => 'required',
         ]);
 
-        $kategori = new Kategori;
- 
-        $kategori->nama = $request->nama;
-        $kategori->deskripsi = $request->deskripsi;
- 
-        $kategori->save();
+        $CoverName = time().'.'.$request->cover->extension();
+        $FileName = time().'.'.$request->file->extension();
 
-        return redirect('/admin/jurnal/kategori');
+        $jurnal = new Jurnal;
+ 
+        $jurnal->penulis = $request->penulis;
+        $jurnal->judul = $request->judul;
+        $jurnal->abstrak = $request->abstrak;
+        $jurnal->tahun = $request->tahun;
+        $jurnal->cover = $CoverName;
+        $jurnal->file = $FileName;
+        $jurnal->kategori_jurnal_id = $request->kategori_jurnal_id;
+ 
+        $jurnal->save();
     }
 
     /**
