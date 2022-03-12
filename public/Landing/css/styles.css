@@ -234,6 +234,27 @@ a.white:hover {
     text-decoration: none;
 }
 
+.btn-solid-logout {
+    display: inline-block;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid red;
+    border-radius: 32px;
+    background-color: red;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 0;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.btn-solid-logout:hover {
+    background-color: transparent;
+    color: white; /* needs to stay here because of the color property of a tag */
+    text-decoration: none;
+}
+
 .btn-outline-nav {
     display: inline-block;
     padding: 1rem 2rem 1rem 2rem;
@@ -812,6 +833,10 @@ input[type="checkbox"] {
     border-radius: 0.25rem;
     height: 560px;
     width: 450px;
+}
+.basic-1 h1 {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .basic-1 h2 {

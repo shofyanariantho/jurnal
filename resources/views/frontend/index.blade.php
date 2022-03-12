@@ -9,7 +9,7 @@
                       <h1 class="h1-large">Journal Edu For Future</h1>
                       <p class="p-large">Upload your journal for your portfolio and help everbody</p>
                       <a class="btn-solid-lg page-scroll" style="cursor: pointer" href="/register">REGISTER</a>
-                      <a class="btn-outline-lg page-scroll popup-with-move-anim" href="#login">LOGIN</a>
+                      <a class="btn-outline-lg page-scroll" style="cursor: pointer" href="/login">LOGIN</a>
                   </div>
                   </div>
                   

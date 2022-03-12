@@ -29,12 +29,15 @@
                 <a class="dropdown-item page-scroll" href="/journal">LIST JOURNAL</a>
               </div>
             </li>
+            @guest
+                
             <li class="nav-item">
                 <a class="btn-outline-nav" href="/register">SIGN UP</a>
             </li>
+            @endguest
             @auth
               <li class="nav-item">
-                <a class="btn-outline-nav href="{{ route('logout') }}
+                <a class="btn-solid-logout href="{{ route('logout') }}
                   onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                     Logout

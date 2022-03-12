@@ -19,7 +19,7 @@ class CreateProfileTable extends Migration
             $table->string('gelar_depan', 45);
             $table->string('gelar_belakang', 45);
             $table->string('pendidikan', 45);
-            $table->integer('jenis_kelamin');
+            $table->string('jenis_kelamin',45);
             $table->string('tempat_lahir', 45);
             $table->string('tanggal_lahir', 45);
             $table->unsignedBigInteger('user_id');

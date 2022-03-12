@@ -1,6 +1,6 @@
 @extends('frontend.layout.home')
 @section('content')
-<div id="journal" class="basic-3 bg-dark-blue" style="height: 100%">
+<div class="basic-1 bg-dark-blue" style="height: 100%">
     <div class="container" class= "d-flex justify-content-center">
             <h1>Register Now</h1>
     </div>
@@ -79,14 +79,6 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <input type="number" name="jenis_kelamin" class="form-control-input form-control-select" placeholder="Jenis Kelamin" required>
-                            @error('jenis_kelamin')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
                         
                         <div class="form-group ">
                             <select name="jenis_kelamin" class="form-control-select form-control-input" required >
@@ -100,7 +92,16 @@
                             </span>
                             @enderror
                         </div>
-                       
+                        
+                        <div class="form-group">
+                            <input type="text" name="tempat_lahir" class="form-control-input form-control-select" placeholder="Tempat Lahir" required>
+                            @error('tempat_lahir')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
                         <div class="form-group">
                               <input type="text" onfocus="(this.type='date')" name="tanggal_lahir" class="form-control-input form-control-select" placeholder="Tanggal Lahir" required>
                               @error('tanggal_lahir')
@@ -110,7 +111,7 @@
                               @enderror
                         </div>
                         <div class="form-group">
-                        <a class="popup-with-move-anim" style="float: left" href="#login"><strong>already have account?</strong> </a>
+                        <a style="float: left" href="/login"><strong>already have account?</strong> </a>
                         <button type="submit" class="btn btn-solid-reg" style="float: right">
                             {{ __('REGISTER') }}
                         </button>
