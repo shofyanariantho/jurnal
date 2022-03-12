@@ -8,8 +8,10 @@
                   <div class="text-container">
                       <h1 class="h1-large">Journal Edu For Future</h1>
                       <p class="p-large">Upload your journal for your portfolio and help everbody</p>
+                      @guest
                       <a class="btn-solid-lg page-scroll" style="cursor: pointer" href="/register">REGISTER</a>
                       <a class="btn-outline-lg page-scroll" style="cursor: pointer" href="/login">LOGIN</a>
+                     @endguest
                   </div>
                   </div>
                   

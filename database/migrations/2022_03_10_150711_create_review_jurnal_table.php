@@ -19,8 +19,8 @@ class CreateReviewJurnalTable extends Migration
             $table->integer('poin');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('kategori_jurnal_id');
-            $table->foreign('kategori_jurnal_id')->references('id')->on('kategori_jurnal');
+            $table->unsignedBigInteger('jurnal_id');
+            $table->foreign('jurnal_id')->references('id')->on('jurnal');
             $table->timestamps();
         });
     }

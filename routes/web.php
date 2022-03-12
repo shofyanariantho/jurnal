@@ -13,17 +13,26 @@
 
 Route::get('/', 'IndexController@index');
 
+Route::get('/master', function () {
+    return view('layout.admin');
+});
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
 Route::get('/journal', 'IndexController@ViewJournal');
 
+Route::get('admin/jurnal-kategori', function() {
+    return view('admin.jurnal.kategori');
+});
+
+
 Route::get('/detail', function () {
     return view('frontend.detail');
 });
 
-//CRUD Kategori
+// //CRUD Kategori
 Route::get('/admin/jurnal/kategori', 'KategoriController@create'); // Route -> Kategori
 Route::post('/admin/jurnal/kategori', 'KategoriController@store'); // Create -> Route Store -> Kategori
 Route::get('/admin/jurnal/kategori', 'KategoriController@index'); // Read -> Route Index -> Kategori
@@ -34,4 +43,6 @@ Route::delete('/admin/jurnal/kategori/{kategori_id}', 'KategoriController@destro
 //CRUD Jurnal
 Route::resource('jurnal', 'JurnalController');
 
+
+// Auth
 Auth::routes();

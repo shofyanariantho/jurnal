@@ -57,29 +57,36 @@
                         <div class="card-title">@yield('br-title')</div>
                     </div>
                     <div class="card-body pb-2">
+                        
+                            
+                        <div class="col-md-6 col-lg-4">
+                           
+                            <form action="/admin/jurnal/kategori" method="POST">
+                                @csrf
+                                @auth
+                                <div class="form-group">
+                                    <label>Nama Kategori</label>
+                                    <input type="text" name="nama" class="form-control">
+                                </div>
+                                @error('nama')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                                <div class="form-group">
+                                    <label>Deskripsi Kategori</label>
+                                    <textarea name="deskripsi" class="form-control" rows="3"></textarea>
+                                </div>
+                                @error('deskripsi')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                                <div class="card-action mt-3">
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Tambahkan</button>
+                                </div>
+                                @endauth
+                            </form>
+                            
+                        </div>
+                        
                         <div class="row">
-                            <div class="col-md-6 col-lg-4">
-                                <form action="/admin/jurnal/kategori" method="POST">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label>Nama Kategori</label>
-                                        <input type="text" name="nama" class="form-control">
-                                    </div>
-                                    @error('nama')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                    <div class="form-group">
-                                        <label>Deskripsi Kategori</label>
-                                        <textarea name="deskripsi" class="form-control" rows="3"></textarea>
-                                    </div>
-                                    @error('deskripsi')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                    <div class="card-action mt-3">
-                                        <button type="submit" class="btn btn-success btn-lg btn-block">Tambahkan</button>
-                                    </div>
-                                </form>
-                            </div>
                             <div class="col-md-6 col-lg-8">	
                                 <div class="table-responsive mt-2">
                                     <table id="basic-datatables" class="display table table-striped table-hover" >
@@ -98,13 +105,18 @@
                                                     <td>{{$item->nama}}</td>
                                                     <td>{{$item->deskripsi}}</td>
                                                     <td>
+                                                       
+                                                            
                                                         <form 
                                                             action="/admin/jurnal/kategori/{{$item->id}}" method="POST">
                                                             @csrf
                                                             @method('delete')
+                                                            @auth
                                                             <a href="/admin/jurnal/kategori/{{$item->id}}/edit" class="btn btn-warning btn-round btn-xs">Edit</a>
                                                             <input type="submit" class="btn btn-danger btn-round btn-xs" value="Delete">
+                                                            @endauth
                                                         </form>
+                                                      
                                                     </td>
                                                 </tr>
                                             @empty
