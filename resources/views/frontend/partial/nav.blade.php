@@ -30,7 +30,7 @@
               </div>
             </li>
             <li class="nav-item">
-                <a class="btn-outline-nav popup-with-move-anim" href="#registration">SIGN UP</a>
+                <a class="btn-outline-nav" href="/register">SIGN UP</a>
             </li>
           </ul>
           
