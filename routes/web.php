@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('layout.admin');
+    return view('admin.dashboard');
 });
 
 Route::get('/journal', function () {
