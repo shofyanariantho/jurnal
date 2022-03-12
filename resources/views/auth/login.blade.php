@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <a style="float: left" href="/register"><strong>Register Here</strong> </a>
-                        <button type="submit" class="btn btn-solid-reg" style="float: right">
+                        <button type="submit" class="btn btn-solid-reg"  style="float: right" >
                             {{ __('LOGIN') }}
                         </button>
                         </div>
