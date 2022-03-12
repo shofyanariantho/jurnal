@@ -21,8 +21,6 @@ class CreateJurnalTable extends Migration
             $table->integer('tahun');
             $table->string('cover', 45);
             $table->string('file', 45);
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('kategori_jurnal_id');
             $table->foreign('kategori_jurnal_id')->references('id')->on('kategori_jurnal');
             $table->timestamps();

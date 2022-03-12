@@ -13,4 +13,5 @@ class Jurnal extends Model
     {
         return $this->belongsTo('App\Kategori');
     }
+    
 }

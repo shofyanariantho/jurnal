@@ -74,6 +74,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        Alert::success('Register', 'Registrasi Berhasil');
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -91,6 +92,5 @@ class RegisterController extends Controller
             'user_id' => $user->id,
         ]);
         return $user;
-        Alert::success('Register', 'Registrasi Berhasil');
     }
 }

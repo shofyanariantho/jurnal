@@ -54,7 +54,7 @@
                     <div class="card-header">
                         <div class="card-title">@yield('br-title')</div>
                     </div>
-                    <form action="/admin/jurnal/kategori" method="POST" enctype="multipart/form-data">
+                    <form action="/jurnal" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body pb-2">
                             <div class="row">
@@ -105,11 +105,12 @@
                                     <div class="form-group">
                                         <label>Upload File</label>
                                         <input type="file" name="file" class="form-control">
-                                    </div>			
+                                    </div>
+                                    <div class="form-group">		
                                     <div class="card-action mt-3">
                                         <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
                                     </div>
-                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>

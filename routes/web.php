@@ -32,6 +32,8 @@ Route::get('/detail', function () {
     return view('frontend.detail');
 });
 
+
+
 // //CRUD Kategori
 Route::get('/admin/jurnal/kategori', 'KategoriController@create'); // Route -> Kategori
 Route::post('/admin/jurnal/kategori', 'KategoriController@store'); // Create -> Route Store -> Kategori
