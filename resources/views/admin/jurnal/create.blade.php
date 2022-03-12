@@ -54,7 +54,7 @@
                     <div class="card-header">
                         <div class="card-title">@yield('br-title')</div>
                     </div>
-                    <form action="/cast" method="POST">
+                    <form action="/cast" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body pb-2">
                             <div class="row">
@@ -91,11 +91,11 @@
                                     @enderror
                                     <div class="form-group">
                                         <label>Kategori</label>
-                                        <select name="kategori_jurnal_id" class="form-control">
-                                            <option>Umum</option>
-                                            <option>Syariah</option>
-                                            <option>Fiqih</option>
-                                            <option>Aqidah</option>
+                                        <select name="kategori_id" class="form-control">
+                                            <option>--- Pilih Kategori ---</option>
+                                            @foreach ($kategori as $item)
+                                                <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
