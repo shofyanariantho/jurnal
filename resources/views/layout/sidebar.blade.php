@@ -40,15 +40,16 @@
                                 </a>
                             </li>
                         </ul>
-                        <li class="nav-item">
-                            <a href="/profile" class="nav-link">
-                                <i class="nav-icon fa fa-camera-retro"></i>
-                        <p>Profile
-                            <span class="right badge badge-danger"></span>
-                                    </p>
-                                </a>
-                           </li>
+                        
                     </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/profile" class="nav-link">
+                        <i class="nav-icon fa fa-camera-retro"></i>
+                        <p>Profile</p>
+                        <span class="right badge badge-danger"></span>  
+                    </a>
                 </li>
             </ul>           
         </div>
