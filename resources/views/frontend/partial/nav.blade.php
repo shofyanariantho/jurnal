@@ -32,6 +32,19 @@
             <li class="nav-item">
                 <a class="btn-outline-nav" href="/register">SIGN UP</a>
             </li>
+            @auth
+              <li class="nav-item">
+                <a class="btn-outline-nav href="{{ route('logout') }}
+                  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </li>
+        @endauth
           </ul>
           
         </div>

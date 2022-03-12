@@ -1,6 +1,6 @@
 @extends('frontend.layout.home')
 @section('content')
-<div id="journal" class="basic-3 bg-dark-blue" style="height: 100%">
+<div id="journal" class="basic-3 bg-dark-blue" style="height: 841px">
     <div class="container" class= "d-flex justify-content-center">
             <h1>Register Now</h1>
     </div>
@@ -8,9 +8,9 @@
     <div class="container">
         <form action="{{ route('register') }}" method="POST">
             @csrf
-            <div class="row">
-                <div class="col-md-6">
-                <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                    <div class="form-group">
                         <input type="text" name="name" class="form-control-input form-control-select" placeholder="Masukan Nama" required >
                         @error('name')
                         <div class="alert alert-primary" role="alert">
@@ -88,7 +88,7 @@
                             @enderror
                         </div>
                         
-                        <div class="form-group ">
+                        {{-- <div class="form-group ">
                             <select name="jenis_kelamin" class="form-control-select form-control-input" required >
                                 <option value="" disabled selected >Jenis Kelamin</option>
                                 <option value="laki-laki">Laki-Laki</option>
@@ -99,8 +99,15 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
+                        </div> --}}
+                        <div class="form-group">
+                            <input type="text" name="tempat_lahir" class="form-control-input form-control-select" placeholder="Tempat Lahir" required>
+                            @error('tempat_lahir')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
-                       
                         <div class="form-group">
                               <input type="text" onfocus="(this.type='date')" name="tanggal_lahir" class="form-control-input form-control-select" placeholder="Tanggal Lahir" required>
                               @error('tanggal_lahir')
@@ -116,10 +123,9 @@
                         </button>
                         </div>
                     </div>    
-                
-            </div>
-        </form>
         </div>
+        </form>
     </div>
     
+</div>
 @endsection

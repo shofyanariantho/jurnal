@@ -57,14 +57,11 @@ class RegisterController extends Controller
             'lembaga' => ['required'],
             'gelar_depan' => ['required'],
             'gelar_belakang' => ['required'],
-            'pendidikan_terakhir' => ['required'],
+            'pendidikan' => ['required'],
             'jenis_kelamin' => ['required'],
             'tempat_lahir' => ['required'],
             'tanggal_lahir' => ['required'],
-        ],
-    [
-        'name.required' => 'Mohon Isi Name',
-    ]);
+        ]);
     }
 
     /**
@@ -75,23 +72,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        dd : $request(all());
-        // $user = User::create([
-        //     'name' => $data['name'],
-        //     'email' => $data['email'],
-        //     'password' => Hash::make($data['password']),
-        // ]);
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
 
-        // $profile = Profile::create([
-        //     'lembaga' => $data['lembaga'],
-        //     'gelar_depan' => $data['gelar_depan'],
-        //     'gelar_belakang' => $data['gelar_belakang'],
-        //     'pendidikan' => $data['pendidikan'],
-        //     'jenis_kelamin' => $data['jenis_kelamin'],
-        //     'tempat_lahir' => $data['tempat_lahir'],
-        //     'tanggal_lahir' => $data['tanggal_lahir'],
-        //     'user_id' => $user->id,
-        // ]);
-        // return $user;
+        $profile = Profile::create([
+            'lembaga' => $data['lembaga'],
+            'gelar_depan' => $data['gelar_depan'],
+            'gelar_belakang' => $data['gelar_belakang'],
+            'pendidikan' => $data['pendidikan'],
+            'jenis_kelamin' => $data['jenis_kelamin'],
+            'tempat_lahir' => $data['tempat_lahir'],
+            'tanggal_lahir' => $data['tanggal_lahir'],
+            'user_id' => $user->id,
+        ]);
+        return $user;
     }
 }
