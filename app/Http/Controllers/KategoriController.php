@@ -7,6 +7,11 @@ use App\Kategori;
 
 class KategoriController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index']);
+    }
+
     public function create() {
         return view('admin.jurnal.kategori');
     }
@@ -52,6 +57,8 @@ class KategoriController extends Controller
 
         return redirect('/admin/jurnal/kategori');
     }
+
+   
 
     public function destroy($kategori_id) {
         $kategori = Kategori::find($kategori_id);
