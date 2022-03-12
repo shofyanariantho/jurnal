@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('layout.admin');
+    return view('admin.dashboard');
 });
 
 Route::get('/journal', function () {
@@ -35,6 +35,10 @@ Route::get('/admin/jurnal-add', function() {
     return view('admin.jurnal.create');
 });
 
-Route::get('admin/jurnal-kategori', function() {
-    return view('admin.jurnal.kategori');
-});
+//CRUD Kategori
+Route::get('/admin/jurnal/kategori', 'KategoriController@create'); // Route -> Kategori
+Route::post('/admin/jurnal/kategori', 'KategoriController@store'); // Create -> Route Store -> Kategori
+Route::get('/admin/jurnal/kategori', 'KategoriController@index'); // Read -> Route Index -> Kategori
+Route::get('/admin/jurnal/kategori/{kategori_id}/edit', 'KategoriController@edit'); // Update -> Route Edit -> Kategori
+Route::put('/admin/jurnal/kategori/{kategori_id}', 'KategoriController@update'); // Update -> Route
+Route::delete('/admin/jurnal/kategori/{kategori_id}', 'KategoriController@destroy'); // Delete -> Route

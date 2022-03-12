@@ -35,7 +35,7 @@
                                 </a>
                             </li>
                             <li class= @yield('sb-jurnal-kategori')>
-                                <a href="/admin/jurnal-kategori">
+                                <a href="/admin/jurnal/kategori">
                                     <span class="sub-item">Kategori</span>
                                 </a>
                             </li>
