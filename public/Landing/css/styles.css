@@ -84,6 +84,16 @@ h6 {
     line-height: 1.375rem;
 }
 
+select:required:invalid {
+    color: gray;
+}
+option[value=""][disabled] {
+    display: none;
+}
+option {
+    color: black;
+}
+
 .p-large {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -826,7 +836,7 @@ input[type="checkbox"] {
 /*     Details Lightbox     */
 /****************************/
 .lightbox-basic {
-    position: relative;
+    /* position: relative; */
     max-width: 1150px;
     margin: 2.5rem auto;
     padding: 3rem 1rem;

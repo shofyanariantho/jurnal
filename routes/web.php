@@ -11,17 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', 'IndexController@index');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
-Route::get('/journal', function () {
-    return view('frontend.journal');
-});
+Route::get('/journal', 'IndexController@ViewJournal');
 
 Route::get('/detail', function () {
     return view('frontend.detail');
@@ -37,3 +33,5 @@ Route::delete('/admin/jurnal/kategori/{kategori_id}', 'KategoriController@destro
 
 //CRUD Jurnal
 Route::resource('jurnal', 'JurnalController');
+
+Auth::routes();
