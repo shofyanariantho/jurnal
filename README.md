@@ -14,7 +14,7 @@ Tema: Repository Journal Edu, Free Share Journal
 
 ## ERD
 
-<p align="center"><img src="https://shofyan.my.id/wp-content/uploads/2022/03/ERD-Jurnal.png" width="400"></p>
+<p align="center"><img src="https://shofyan.my.id/wp-content/uploads/2022/03/ERD-Jurnal.png" width="700"></p>
 
 ## Link Demo
 

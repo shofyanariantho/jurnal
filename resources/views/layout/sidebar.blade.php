@@ -48,7 +48,7 @@
                 @auth
                 <li class="nav-item">
                     <a href="/profil" class="nav-link">
-                        <i class="nav-icon fa fa-camera-retro"></i>
+                        <i class="nav-icon fas fa-user"></i>
                         <p>Profile</p>
                         <span class="right badge badge-danger"></span>  
                     </a>
