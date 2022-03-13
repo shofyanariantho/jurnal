@@ -161,6 +161,13 @@ class JurnalController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $jurnal = Jurnal::find($id);
+        $path = "gambar/";
+        $path = "doc/";
+        File::delete($path . $jurnal->cover);
+        File::delete($path . $jurnal->file);
+        $jurnal->delete();
+
+        return redirect('/jurnal');
     }
 }
