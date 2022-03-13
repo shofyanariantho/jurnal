@@ -43,7 +43,7 @@
               
             </p>
             <a class="btn-outline-lg mr-3" href="{{ url()->previous() }}">Back</a>
-            <a class="btn-solid-lg" href="{{asset('doc/'. $jurnal->file)}}">Download Free</a>
+            <a class="btn-solid-lg" href="{{asset('doc/'. $jurnal->file)}}" target="_blank">Download Free</a>
           </div>
           <!-- end of text-container -->
         </div>
