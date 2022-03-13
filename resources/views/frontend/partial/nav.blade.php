@@ -20,17 +20,15 @@
 
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="/">HOME <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown mr-3">
+            {{-- <li class="nav-item dropdown mr-3">
               <a class="nav-link dropdown-toggle" href="#journal" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JOURNAL</a>
               <div class="dropdown-menu" aria-labelledby="dropdown01">
                 <a class="dropdown-item page-scroll" href="/journal">LIST JOURNAL</a>
               </div>
-            </li>
+            </li> --}}
             @guest
                 
+            
             <li class="nav-item">
                 <a class="btn-outline-nav" href="/register">SIGN UP</a>
             </li>
@@ -47,6 +45,8 @@
                     @csrf
                 </form>
             </li>
+            
+          <a class="btn-solid-dash" href="/dashboard">Go To Dashboard</a> 
         @endauth
           </ul>
           

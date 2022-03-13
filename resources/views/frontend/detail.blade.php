@@ -6,7 +6,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-10 offset-xl-1">
-              <h1>Detail Journal (Judul Journal)</h1>
+              <h1>Detail Journal {{$jurnal->judul}}</h1>
             </div>
             <!-- end of col -->
           </div>
@@ -23,22 +23,22 @@
       <div class="row">
         <div class="col-lg-6 col-xl-5">
           <div class="image-container img-book">
-            <img class="img-fluid" src="{{asset('landing/images/coverbook.jpg')}}" alt="alternative" />
+            <img class="img-fluid" src="{{asset('gambar/'. $jurnal->cover)}}" alt="alternative" />
           </div>
           <!-- end of image-container -->
         </div>
         <!-- end of col -->
         <div class="col-lg-6 col-xl-7">
           <div class="text-container">
-            <p style="display: inline-block" class="mr-2">William H Brock</p>
-            <p style="display: inline-block"><strong>( 2005 )</strong></p>
-            <h2>The Case of The Poisonous Socks: Tales from Chemistry</h2>
+            <p style="display: inline-block" class="mr-2">{{$jurnal->penulis}}</p>
+            <p style="display: inline-block"><strong>( {{$jurnal->tahun}} )</strong></p>
+            <h2>{{$jurnal->judul}}</h2>
             <p>Rating : 8 / 10</p>
             <p class="mb-5">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo officia iste iusto. Quam vel fugit optio architecto, magni consequatur earum voluptatum. A soluta placeat aperiam blanditiis incidunt magnam, quibusdam
-              voluptatem.
+              {{ strip_tags( $jurnal->abstrak ) }}
+              
             </p>
-            <a class="btn-outline-lg mr-3" href="/journal">Back</a>
+            <a class="btn-outline-lg mr-3" href="{{ url()->previous() }}">Back</a>
             <a class="btn-solid-lg" href="#details-lightbox">Download Free</a>
           </div>
           <!-- end of text-container -->

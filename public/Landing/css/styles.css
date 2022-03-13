@@ -255,6 +255,27 @@ a.white:hover {
     text-decoration: none;
 }
 
+.btn-solid-dash {
+    display: inline-block;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid #31bcb7;
+    border-radius: 32px;
+    background-color: #31bcb7;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 0;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.btn-solid-dash:hover {
+    background-color: transparent;
+    color: white; /* needs to stay here because of the color property of a tag */
+    text-decoration: none;
+}
+
 .btn-outline-nav {
     display: inline-block;
     padding: 1rem 2rem 1rem 2rem;

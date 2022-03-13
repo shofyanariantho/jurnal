@@ -80,7 +80,9 @@ class JurnalController extends Controller
      */
     public function show($id)
     {
-    
+        $kategori = DB::table('kategori_jurnal')->get();
+        $jurnal = Jurnal::find($id);
+        return view('frontend.detail', compact('jurnal','kategori'));
     }
 
     /**

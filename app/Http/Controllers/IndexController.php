@@ -10,8 +10,6 @@ class IndexController extends Controller
         return view('frontend.index');
     }
 
-    public function ViewJournal(){
-        return view('frontend.journal');
-    }
+   
 
 }

@@ -21,7 +21,7 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
-Route::get('/journal', 'IndexController@ViewJournal');
+
 
 Route::get('admin/jurnal-kategori', function() {
     return view('admin.jurnal.kategori');
