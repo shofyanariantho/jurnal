@@ -17,6 +17,10 @@ Tema: Repository Journal Edu, Free Share Journal
 <p align="center"><img src="https://shofyan.my.id/wp-content/uploads/2022/03/ERD-Jurnal.png" width="400"></p>
 
 ## Link Demo
+-link demo
+    1) https://youtu.be/vDPzPICsO7g
 
 - [Demo Aplikasi](https://userinsights.com)
 - [Link Deploy](https://www.fragrantica.com)
+
+
