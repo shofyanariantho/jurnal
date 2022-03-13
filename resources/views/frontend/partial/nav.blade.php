@@ -29,9 +29,10 @@
             @guest
                 
             
-            <li class="nav-item">
+            <li class="nav-item mr-3">
                 <a class="btn-outline-nav" href="/register">SIGN UP</a>
             </li>
+            <a class="btn-solid-dash" href="/dashboard">Go To Dashboard</a> 
             @endguest
             @auth
               <li class="nav-item">
@@ -46,7 +47,7 @@
                 </form>
             </li>
             
-          <a class="btn-solid-dash" href="/dashboard">Go To Dashboard</a> 
+          
         @endauth
           </ul>
           

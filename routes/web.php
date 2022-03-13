@@ -45,6 +45,10 @@ Route::delete('/admin/jurnal/kategori/{kategori_id}', 'KategoriController@destro
 //CRUD Jurnal
 Route::resource('jurnal', 'JurnalController');
 
+// Profile
+Route::resource('profil','ProfileController')->only([
+    'index', 'update'
+]);
 
 // Auth
 Auth::routes();

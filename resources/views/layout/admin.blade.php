@@ -32,7 +32,8 @@
 			<div class="logo-header" data-background-color="blue">
 				
 				<a href="/" class="logo">
-					<img src="{{asset('admin/assets/img/logo.svg')}}" alt="navbar brand" class="navbar-brand">
+					<img src="{{asset('landing/images/logo.svg')}}" alt="journal" /> 
+					<p class="d-inline navbar-brand logo-text" style="color: white">Journal Edu</p>
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">

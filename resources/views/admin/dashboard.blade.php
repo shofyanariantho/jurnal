@@ -5,7 +5,12 @@
 @section('content')
 <div class="page-inner">
     <div class="page-header">
-        <h4 class="page-title">Welcome back, User!</h4>
+        @guest
+        <h4 class="page-title">Welcome, Please <a href="/register">Sign Up</a> / <a href="/login">Login</a> </h4>
+        @endguest
+        @auth
+        <h4 class="page-title">Welcome, Back {{Auth:: user() -> name }} </h4>
+        @endauth
     </div>
     <div class="row">
         <div class="col-md-4">

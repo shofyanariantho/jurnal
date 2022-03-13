@@ -29,11 +29,13 @@
                                     <span class="sub-item">List Jurnal</span>
                                 </a>
                             </li>
+                            @auth
                             <li  class=@yield('sb-jurnal-add')>
                                 <a href="/jurnal/create">
                                     <span class="sub-item">Tambah Jurnal</span>
                                 </a>
                             </li>
+                            @endauth
                             <li class= @yield('sb-jurnal-kategori')>
                                 <a href="/admin/jurnal/kategori">
                                     <span class="sub-item">Kategori</span>
@@ -45,7 +47,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/profile" class="nav-link">
+                    <a href="/profil" class="nav-link">
                         <i class="nav-icon fa fa-camera-retro"></i>
                         <p>Profile</p>
                         <span class="right badge badge-danger"></span>  

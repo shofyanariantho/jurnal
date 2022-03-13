@@ -75,8 +75,8 @@
                                                             action="/jurnal/{{$item->id}}" method="POST">
                                                             @csrf
                                                             @method('delete')
-                                                            @auth
                                                             <a href="/jurnal/{{$item->id}}" class="btn btn-info btn-round btn-xs">Detail</a>
+                                                            @auth
                                                             <a href="/jurnal/{{$item->id}}/edit" class="btn btn-warning btn-round btn-xs">Edit</a>
                                                             <input type="submit" class="btn btn-danger btn-round btn-xs" value="Delete">
                                                             @endauth
