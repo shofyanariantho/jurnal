@@ -111,8 +111,8 @@ class JurnalController extends Controller
             'judul' => 'required',
             'abstrak' => 'required',
             'tahun' => 'required',
-            'cover'	=> 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'file' => 'required|mimes:pdf|max:10000',
+            'cover'	=> 'image|mimes:jpeg,png,jpg|max:2048',
+            'file' => 'mimes:pdf|max:10000',
             'kategori_jurnal_id' => 'required',
         ]);
 
@@ -122,9 +122,6 @@ class JurnalController extends Controller
             $CoverName = time().'.'.$request->cover->extension();
 
             $request->cover->move(public_path('gambar'), $CoverName);
-
-            $jurnal = new Jurnal;
-    
             $jurnal->penulis = $request->penulis;
             $jurnal->judul = $request->judul;
             $jurnal->abstrak = $request->abstrak;
@@ -134,8 +131,6 @@ class JurnalController extends Controller
         }elseif($request->has('file')){
             $FileName = time().'.'.$request->file->extension();
             $request->file->move(public_path('doc'), $FileName);
-
-            $jurnal = new Jurnal;
             $jurnal->penulis = $request->penulis;
             $jurnal->judul = $request->judul;
             $jurnal->abstrak = $request->abstrak;
