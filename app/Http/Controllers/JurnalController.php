@@ -16,7 +16,7 @@ class JurnalController extends Controller
      */
     public function index()
     {
-        $jurnal = jurnal::all();
+        $jurnal = Jurnal::all();
         return view('admin.jurnal.index', compact('jurnal'));
     }
 
@@ -52,6 +52,9 @@ class JurnalController extends Controller
         $CoverName = time().'.'.$request->cover->extension();
         $FileName = time().'.'.$request->file->extension();
 
+        $request->cover->move(public_path('gambar'), $CoverName);
+        $request->file->move(public_path('doc'), $FileName);
+
         $jurnal = new Jurnal;
  
         $jurnal->penulis = $request->penulis;
@@ -63,6 +66,8 @@ class JurnalController extends Controller
         $jurnal->kategori_jurnal_id = $request->kategori_jurnal_id;
  
         $jurnal->save();
+
+        return redirect('/jurnal');
     }
 
     /**
@@ -84,7 +89,10 @@ class JurnalController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kategori = DB::table('kategori_jurnal')->get();
+        $jurnal = Jurnal::findOrFail($id);
+
+        return view('admin.jurnal.editjurnal', compact('jurnal', 'kategori'));
     }
 
     /**
@@ -96,7 +104,53 @@ class JurnalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'penulis' => 'required',
+            'judul' => 'required',
+            'abstrak' => 'required',
+            'tahun' => 'required',
+            'cover'	=> 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'file' => 'required|mimes:pdf|max:10000',
+            'kategori_jurnal_id' => 'required',
+        ]);
+
+        $jurnal = Jurnal::find($id); 
+        
+        if($request->has('cover')) {
+            $CoverName = time().'.'.$request->cover->extension();
+
+            $request->cover->move(public_path('gambar'), $CoverName);
+
+            $jurnal = new Jurnal;
+    
+            $jurnal->penulis = $request->penulis;
+            $jurnal->judul = $request->judul;
+            $jurnal->abstrak = $request->abstrak;
+            $jurnal->tahun = $request->tahun;
+            $jurnal->cover = $CoverName;
+            $jurnal->kategori_jurnal_id = $request->kategori_jurnal_id;
+        }elseif($request->has('file')){
+            $FileName = time().'.'.$request->file->extension();
+            $request->file->move(public_path('doc'), $FileName);
+
+            $jurnal = new Jurnal;
+            $jurnal->penulis = $request->penulis;
+            $jurnal->judul = $request->judul;
+            $jurnal->abstrak = $request->abstrak;
+            $jurnal->tahun = $request->tahun;
+            $jurnal->file = $FileName;
+            $jurnal->kategori_jurnal_id = $request->kategori_jurnal_id;
+
+        }else{
+            $jurnal->penulis = $request->penulis;
+            $jurnal->judul = $request->judul;
+            $jurnal->abstrak = $request->abstrak;
+            $jurnal->tahun = $request->tahun;
+            $jurnal->kategori_jurnal_id = $request->kategori_jurnal_id;
+        }
+
+        $jurnal->save();
+        return redirect('/jurnal');
     }
 
     /**

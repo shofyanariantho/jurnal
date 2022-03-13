@@ -39,7 +39,7 @@ class KategoriController extends Controller
 
     public function edit($kategori_id) {
         $kategori = Kategori::where('id', $kategori_id)->first();
-        return view('admin.jurnal.edit-jurnal', compact('kategori'));
+        return view('admin.jurnal.editkategori', compact('kategori'));
     }
 
     public function update(Request $request, $kategori_id) {
