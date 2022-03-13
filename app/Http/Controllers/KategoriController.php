@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kategori;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KategoriController extends Controller
 {
@@ -29,6 +30,7 @@ class KategoriController extends Controller
  
         $kategori->save();
 
+        Alert::success('Berhasil', 'Data berhasil ditambahkan!');
         return redirect('/admin/jurnal/kategori');
     }
 

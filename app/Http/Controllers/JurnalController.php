@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Jurnal;
 use File;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class JurnalController extends Controller
 {
@@ -75,6 +76,7 @@ class JurnalController extends Controller
  
         $jurnal->save();
 
+        Alert::success('Berhasil', 'Data berhasil ditambahkan!');
         return redirect('/jurnal');
     }
 
