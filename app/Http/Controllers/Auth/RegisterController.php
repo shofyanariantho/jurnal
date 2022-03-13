@@ -91,6 +91,7 @@ class RegisterController extends Controller
             'tanggal_lahir' => $data['tanggal_lahir'],
             'user_id' => $user->id,
         ]);
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
         return $user;
     }
 }

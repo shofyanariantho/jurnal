@@ -18,6 +18,7 @@ class JurnalController extends Controller
     {
         $jurnal = jurnal::all();
         return view('admin.jurnal.index', compact('jurnal'));
+        // return view('frontend.journal', compact('jurnal'));
     }
 
     /**
@@ -29,6 +30,7 @@ class JurnalController extends Controller
     {
         $kategori = DB::table('kategori_jurnal')->get();
         return view('admin.jurnal.create', compact('kategori'));
+        
     }
 
     /**
@@ -73,7 +75,7 @@ class JurnalController extends Controller
      */
     public function show($id)
     {
-        //
+    
     }
 
     /**

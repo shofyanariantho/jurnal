@@ -20,69 +20,29 @@
 
 @section('content')
 <div class="basic-4 bg-dark-blue">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="resource-container">
-            <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
-            <div class="text-container">
-              <h4 >Judul Journal</h4>
-              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="resource-container">
+          <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
+          <div class="text-container">
+              @forelse ($jurnal as $item)
+              <h4>{{$item->judul}}</h4>
+              <span class="badge badge-secondary" style="margin-bottom: 1rem">{{$item->kategori_journal_id->nama}}</span> 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
                 Cupiditate omnis necessitatibus repudiandae.
               </p>
               <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
+              @empty
+              <h4>Journal Belum ada</h4>
+              @endforelse
             </div>
             <!-- end of text-container -->
           </div>
-          <div class="resource-container">
-            <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
-            <div class="text-container">
-              <h4>Judul Journal</h4>
-              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
-                Cupiditate omnis necessitatibus repudiandae.
-              </p>
-              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
-            </div>
-            <!-- end of text-container -->
-          </div>
-
-          <!-- end of resource-container -->
+        
         </div>
-        <div class="col-lg-12">
-          <div class="resource-container">
-            <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
-            <div class="text-container">
-              <h4>Judul Journal</h4>
-              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
-                Cupiditate omnis necessitatibus repudiandae.
-              </p>
-              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
-            </div>
-            <!-- end of text-container -->
-          </div>
-          <div class="resource-container">
-            <img class="img-fluid" src="{{asset('landing/images/resources-1.jpg')}}" alt="alternative" />
-            <div class="text-container">
-              <h4>Judul Journal</h4>
-              <span class="badge badge-secondary" style="margin-bottom: 1rem">Kategori</span> 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe vero accusantium error totam beatae eum minima, sapiente asperiores consequatur voluptatibus veritatis dignissimos, nostrum vel assumenda?
-                Cupiditate omnis necessitatibus repudiandae.
-              </p>
-              <a class="btn-solid-dtl" href="/detail">Detail Journal</a>
-            </div>
-            <!-- end of text-container -->
-          </div>
-
-          <!-- end of resource-container -->
-        </div>
-
+        
         <!-- end of col -->
       </div>
       <!-- end of row -->
