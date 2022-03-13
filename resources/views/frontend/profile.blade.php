@@ -2,7 +2,7 @@
 @section('content')
 <div class="basic-1 bg-dark-blue" style="height: 100%">
     <div class="container" class= "d-flex justify-content-center">
-            <h1>Upadate Your Profile</h1>
+            <h1>Update Your Profile</h1>
     </div>
     <hr class="mb-4"/>
     <div class="container">
@@ -93,7 +93,6 @@
                               @enderror
                         </div>
                         <div class="form-group">
-                        <a style="float: left" href="/login"><strong>already have account?</strong> </a>
                         <button type="submit" class="btn btn-solid-reg" style="float: right">
                             {{ __('Update Profile') }}
                         </button>

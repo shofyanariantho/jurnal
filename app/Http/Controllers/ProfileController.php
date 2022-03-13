@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
-use RealRashid\SweetAlert\Facades\Alert;
+Use Alert;
 
 class ProfileController extends Controller
 {

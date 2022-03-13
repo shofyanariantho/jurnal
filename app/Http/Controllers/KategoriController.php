@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kategori;
+Use Alert;
+
 
 class KategoriController extends Controller
 {
@@ -20,7 +22,12 @@ class KategoriController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
-        ]);
+        ],
+        [
+            'nama.required' => 'Nama Ketegori Tidak Boleh Kosong',
+            'deskripsi.required' => 'Deskripsi Kategori Tidak Boleh Kosong',
+        ]
+    );
 
         $kategori = new Kategori;
  
@@ -28,7 +35,7 @@ class KategoriController extends Controller
         $kategori->deskripsi = $request->deskripsi;
  
         $kategori->save();
-
+        Alert::success('Congrats', 'You\'ve Has Been Add Ketegori');
         return redirect('/admin/jurnal/kategori');
     }
 

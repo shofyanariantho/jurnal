@@ -92,20 +92,29 @@
                                     <div class="form-group">
                                         <label>Kategori</label>
                                         <select name="kategori_jurnal_id" class="form-control">
-                                            <option>--- Pilih Kategori ---</option>
+                                            <option value="">--- Pilih Kategori ---</option>
                                             @foreach ($kategori as $item)
                                                 <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                             @endforeach
                                         </select>
                                     </div>
+                                    @error('kategori_jurnal_id')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Upload Cover Image</label>
                                         <input type="file" name="cover" class="form-control">
                                     </div>
+                                    @error('cover')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Upload File</label>
                                         <input type="file" name="file" class="form-control">
                                     </div>
+                                    @error('file')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                     <div class="form-group">		
                                     <div class="card-action mt-3">
                                         <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>

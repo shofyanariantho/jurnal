@@ -63,6 +63,7 @@ class RegisterController extends Controller
             'jenis_kelamin' => ['required'],
             'tempat_lahir' => ['required'],
             'tanggal_lahir' => ['required'],
+            
         ]);
     }
 

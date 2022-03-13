@@ -48,13 +48,22 @@ class JurnalController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'penulis' => 'required',
             'judul' => 'required',
+            'penulis' => 'required',
             'abstrak' => 'required',
             'tahun' => 'required',
+            'kategori_jurnal_id' => 'required',
             'cover'	=> 'required|image|mimes:jpeg,png,jpg|max:2048',
             'file' => 'required|mimes:pdf|max:10000',
-            'kategori_jurnal_id' => 'required',
+        ],
+        [
+            'judul.required' => 'Judul Jurnal Tidak Boleh Kosong',
+            'penulis.required' => 'Penulis Jurnal Tidak Boleh Kosong',
+            'abstrak.required' => 'Abstrak Jurnal Tidak Boleh Kosong',
+            'tahun.required' => 'Tahun Jurnal Tidak Boleh Kosong',
+            'kategori_jurnal_id.required' => 'Ketegori Jurnal Tidak Boleh Kosong',
+            'cover.required' => 'Cover Jurnal Tidak Boleh Kosong',
+            'file.required' => 'File Jurnal Tidak Boleh Kosong',
         ]);
 
         $CoverName = time().'.'.$request->cover->extension();

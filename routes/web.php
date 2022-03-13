@@ -13,25 +13,10 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/master', function () {
-    return view('layout.admin');
-});
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
-
-
-
-Route::get('admin/jurnal-kategori', function() {
-    return view('admin.jurnal.kategori');
-});
-
-
-Route::get('/detail', function () {
-    return view('frontend.detail');
-});
-
 
 
 // //CRUD Kategori

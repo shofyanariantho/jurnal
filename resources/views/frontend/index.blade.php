@@ -40,7 +40,7 @@
           <p class="p-heading p-large">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit voluptate distinctio accusantium aperiam minima aliquam deserunt itaque, quae tempore in, omnis maxime! Fugit ullam inventore cupiditate ipsam voluptatibus cum commodi.
           </p>
-          <a class="btn-solid-lg" href="/journal">Show More Journal</a> 
+          <a class="btn-solid-lg" href="/jurnal">Show More Journal</a> 
         </div>
         <!-- end of col -->
       </div>

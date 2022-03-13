@@ -11,11 +11,10 @@
             <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
+                    
                         <input type="text" name="name" class="form-control-input form-control-select" placeholder="Masukan Nama" required >
                         @error('name')
-                        <div class="alert alert-primary" role="alert">
-                           {{ $message }}
-                        </div>
+                            <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
