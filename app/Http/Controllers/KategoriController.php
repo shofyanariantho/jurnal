@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kategori;
+
 use RealRashid\SweetAlert\Facades\Alert;
 
 class KategoriController extends Controller
@@ -21,7 +22,12 @@ class KategoriController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
-        ]);
+        ],
+        [
+            'nama.required' => 'Nama Ketegori Tidak Boleh Kosong',
+            'deskripsi.required' => 'Deskripsi Kategori Tidak Boleh Kosong',
+        ]
+    );
 
         $kategori = new Kategori;
  
@@ -29,7 +35,6 @@ class KategoriController extends Controller
         $kategori->deskripsi = $request->deskripsi;
  
         $kategori->save();
-
         Alert::success('Berhasil', 'Data berhasil ditambahkan!');
         return redirect('/admin/jurnal/kategori');
     }

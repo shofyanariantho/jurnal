@@ -31,10 +31,11 @@
             
             <li class="nav-item mr-3">
                 <a class="btn-outline-nav" href="/register">SIGN UP</a>
+                <a class="btn-solid-dash" href="/dashboard">Go To Dashboard</a> 
             </li>
-            <a class="btn-solid-dash" href="/dashboard">Go To Dashboard</a> 
             @endguest
             @auth
+            <a class="btn-solid-dash" href="/dashboard">Go To Dashboard</a> 
               <li class="nav-item">
                 <a class="btn-solid-logout href="{{ route('logout') }}
                   onclick="event.preventDefault();

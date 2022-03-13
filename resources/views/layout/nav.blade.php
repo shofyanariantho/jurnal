@@ -56,6 +56,9 @@
                 </li>
                 @endguest
                 @auth
+                <li class="nav-item ml-2">
+                    <a class="btn btn-warning btn-sm" href="/">Landing</a>
+                </li>
                 <li class="nav-item ml-2" style="color: white">
                     <a class="btn btn-danger btn-sm href="{{ route('logout') }}
                       onclick="event.preventDefault();

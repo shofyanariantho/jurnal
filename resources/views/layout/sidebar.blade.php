@@ -45,7 +45,7 @@
                         
                     </div>
                 </li>
-
+                @auth
                 <li class="nav-item">
                     <a href="/profil" class="nav-link">
                         <i class="nav-icon fa fa-camera-retro"></i>
@@ -53,6 +53,7 @@
                         <span class="right badge badge-danger"></span>  
                     </a>
                 </li>
+                @endauth
             </ul>           
         </div>
     </div>

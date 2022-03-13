@@ -23,7 +23,7 @@
     <!-- where do you want your post to link to -->
     <meta name="twitter:card" content="summary_large_image" />
     <!-- to have large image post format in Twitter -->
-    @include('sweetalert::alert')
+   
     <!-- Webpage Title -->
     <title>Journal Edu</title>
 
@@ -37,6 +37,7 @@
 
     @stack('style')
 
+   
     {{-- navbar --}}
     @include('frontend.partial.nav')
     {{-- end navbar --}}
@@ -55,6 +56,7 @@
 
     {{-- Content --}}
     @include('frontend.partial.content')
+    @include('sweetalert::alert')
     {{-- End Content --}}
 
     {{-- Footer --}}

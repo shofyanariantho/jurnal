@@ -64,6 +64,7 @@
 	<!-- Content -->
 	<div class="main-panel">
 			<div class="content">
+				@include('sweetalert::alert')
 				@yield('content')
 			</div>
 	</div>
