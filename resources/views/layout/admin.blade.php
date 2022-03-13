@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="{{asset('admin/assets/css/fonts.css')}}">
 	<link rel="stylesheet" href="{{asset('admin/assets/css/fonts.min.css')}}">
 
+
 </head>
 <body>
 	<div class="wrapper">
@@ -49,6 +50,8 @@
 			</div>
 			<!-- End Logo Header -->
 
+			@include('sweetalert::alert')
+			
 			<!-- Navbar Header -->
 			@include('layout.nav')
 			<!-- End Navbar -->
