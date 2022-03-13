@@ -52,3 +52,8 @@ Route::resource('profil','ProfileController')->only([
 
 // Auth
 Auth::routes();
+
+//Review
+Route::resource('review', 'ReviewController')->only([
+    'index', 'store'
+]);
