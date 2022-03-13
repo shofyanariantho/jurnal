@@ -10,7 +10,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-10 offset-xl-1">
-              <h1>Detail Journal {{$jurnal->judul}}</h1>
+              <h1>Journal {{$jurnal->judul}}</h1>
             </div>
             <!-- end of col -->
           </div>
@@ -43,7 +43,7 @@
               
             </p>
             <a class="btn-outline-lg mr-3" href="{{ url()->previous() }}">Back</a>
-            <a class="btn-solid-lg" href="#details-lightbox">Download Free</a>
+            <a class="btn-solid-lg" href="{{asset('doc/'. $jurnal->file)}}">Download Free</a>
           </div>
           <!-- end of text-container -->
         </div>
