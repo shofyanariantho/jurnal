@@ -18,5 +18,5 @@ Tema: Repository Journal Edu, Free Share Journal
 
 ## Link Demo
 
-- [Demo Aplikasi](https://userinsights.com)
-- [Link Deploy](https://www.fragrantica.com)
+- [Demo Aplikasi](https://shofyan.my.id/wp-content/uploads/2022/03/kelompok17.mp4)
+- [Link Deploy](https://demo.shofyan.my.id)
