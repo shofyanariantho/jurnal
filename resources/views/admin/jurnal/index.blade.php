@@ -55,36 +55,38 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Tgl. Upload</th>
                                         <th>Judul</th>
                                         <th>Penulis</th>
                                         <th>Tahun</th>
-                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>10/03/2022</td>
-                                        <td>Pengaruh Harga dan Kemudahan</td>
-                                        <td>Shofyan Ariantho</td>
-                                        <td>2021</td>
-                                        <td>Pending</td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>10/03/2022</td>
-                                        <td>Pengaruh Upah Kerja</td>
-                                        <td>Shofyan Ariantho</td>
-                                        <td>2021</td>
-                                        <td>Publish</td>
-                                        <td>
-
-                                        </td>
+                                        @forelse ($jurnal as $key => $item)
+                                                <tr>
+                                                    <td>{{$key + 1}}</td>
+                                                    <td>{{$item->judul}}</td>
+                                                    <td>{{$item->penulis}}</td>
+                                                    <td>{{$item->tahun}}</td>
+                                                    <td>
+                                                       
+                                                        <form 
+                                                            action="/jurnal/{{$item->id}}" method="POST">
+                                                            @csrf
+                                                            @method('delete')
+                                                            @auth
+                                                            <a href="/jurnal/{{$item->id}}" class="btn btn-info btn-round btn-xs">Detail</a>
+                                                            <a href="/jurnal/{{$item->id}}/edit" class="btn btn-warning btn-round btn-xs">Edit</a>
+                                                            <input type="submit" class="btn btn-danger btn-round btn-xs" value="Delete">
+                                                            @endauth
+                                                        </form>
+                                                      
+                                                    </td>
+                                                </tr>
+                                        @empty
+                                            <h3><b>Jurnal belum ada!</b></h3>	
+                                        @endforelse
                                     </tr>
                                 </tbody>
                             </table>

@@ -25,7 +25,7 @@
                     <div class="collapse @yield('sb-jurnal')" id="base">
                         <ul class="nav nav-collapse">
                             <li class=@yield('sb-jurnal-list')>
-                                <a href="/admin/jurnal">
+                                <a href="/jurnal">
                                     <span class="sub-item">List Jurnal</span>
                                 </a>
                             </li>
