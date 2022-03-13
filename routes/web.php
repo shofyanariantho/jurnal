@@ -48,3 +48,8 @@ Route::resource('jurnal', 'JurnalController');
 
 // Auth
 Auth::routes();
+
+//Review
+Route::resource('review', 'ReviewController')->only([
+    'index', 'store'
+]);

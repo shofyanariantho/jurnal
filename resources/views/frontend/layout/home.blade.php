@@ -35,6 +35,8 @@
     <link href="{{asset('landing/css/magnific-popup.css')}}" rel="stylesheet" />
     <link href="{{asset('landing/css/styles.css')}}" rel="stylesheet" />
 
+    @stack('style')
+
     {{-- navbar --}}
     @include('frontend.partial.nav')
     {{-- end navbar --}}

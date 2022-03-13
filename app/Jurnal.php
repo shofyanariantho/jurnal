@@ -14,4 +14,7 @@ class Jurnal extends Model
         return $this->belongsTo('App\Kategori');
     }
     
+    public function review() {
+        return $this->hasMany('App\User');
+    }
 }
