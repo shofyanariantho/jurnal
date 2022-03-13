@@ -15,6 +15,6 @@ class Jurnal extends Model
     }
     
     public function review() {
-        return $this->hasMany('App\User');
+        return $this->hasMany('App\Review');
     }
 }

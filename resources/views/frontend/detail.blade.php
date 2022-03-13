@@ -56,32 +56,34 @@
   {{-- Komentar --}}
   <div class=" bg-dark-blue">
     <div class="container">
-      <form action="/review" method="POST">
-        @csrf
         <div class="row">
-          <div class="col-lg-6">
-            <input type="hidden" name="jurnal_id" value="{{$jurnal->id}}" id"">
-            <label class="my-1">Beri Nilai</label>
-            <input class="form-control mb-2" type="number" name="poin">
-            <label class="my-1">Komentar</label>
-            <textarea class="form-control" name="isi" placeholder="write a comment..." rows="3" style="margin-bottom: 1rem"></textarea>
-            <button type="submit" class="btn-solid-lg">Post</button>
-            <div class="clearfix"></div>
-            <hr />
+          <div class="col-lg-12 my-2"> 
+            <h3 class="my-3">Review</h3>
+            <li class="media">
+              @foreach ($jurnal->review as $item)
+              @endforeach
+              <a href="#" class="pull-left">
+                <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="rounded-circle" style="margin-right: 1rem" />
+              </a>
+              <div class="media-body">
+                <strong class="text-success">{{$item->user->name}}</strong>
+                <p>{{$item->isi}}</p>
+              </div>
+            </li>
           </div>
-          <div class="col-lg-5" style="margin-left: 4rem">
-                <li class="media">
-                  <a href="#" class="pull-left">
-                    <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="rounded-circle" style="margin-right: 1rem" />
-                  </a>
-                  <div class="media-body">
-                    <strong class="text-success">Username</strong>
-                    <p>Lorem ipsum dolor <a href="#">#sitamet</a> sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </li>
+          <div class="col-lg-12 my-5">
+            <form action="/review" method="POST">
+              @csrf
+                <input type="hidden" name="jurnal_id" value="{{$jurnal->id}}">
+                <label class="my-1">Beri Nilai</label>
+                <input class="form-control mb-2" type="number" name="poin">
+                <label class="my-1">Komentar</label>
+                <textarea class="form-control" name="isi" placeholder="write a comment..." rows="3" style="margin-bottom: 1rem"></textarea>
+                <button type="submit" class="btn-solid-lg">Post</button>
+                <div class="clearfix"></div>
+            </form>
           </div>
         </div>
-      </form>
     </div>
   </div>
   {{-- End Komentar --}}
